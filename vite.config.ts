@@ -5,6 +5,12 @@ import checker from "vite-plugin-checker";
 export default defineConfig({
   plugins: [checker({ typescript: true })],
   worker: {},
+  // Width of the CRT text area in scene units. The upstream project supplied
+  // this as a global from an external helper script; defining it at build time
+  // keeps the render loop from depending on a third-party CDN being up.
+  define: {
+    screenWidth: 1.396,
+  },
   build: {
     sourcemap: false,
   },
