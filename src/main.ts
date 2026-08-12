@@ -1,7 +1,11 @@
 import "./main.css";
 import WebGL from "./webgl";
+import initReveal from "./reveal";
+import initCardStack from "./cardStack";
 
 WebGL();
+initReveal();
+initCardStack();
 
 const root = document.documentElement;
 
