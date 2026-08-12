@@ -1,0 +1,605 @@
+/* ------------------------------------------------------------------
+   Stacking project cards
+   ------------------------------------------------------------------ */
+
+:root {
+  --card-height: 460px;
+  --card-top-offset: 20px;
+}
+
+#cards {
+  list-style: none;
+  padding: 0;
+  display: block;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  position: sticky;
+  margin-bottom: 36px;
+}
+
+#card-1 {
+  top: 15vh;
+  z-index: 1;
+}
+#card-2 {
+  top: calc(15vh + var(--card-top-offset));
+  z-index: 2;
+}
+#card-3 {
+  top: calc(15vh + var(--card-top-offset) * 2);
+  z-index: 3;
+}
+#card-4 {
+  top: calc(15vh + var(--card-top-offset) * 3);
+  z-index: 4;
+}
+#card-5 {
+  top: calc(15vh + var(--card-top-offset) * 4);
+  z-index: 5;
+}
+#card-6 {
+  top: calc(15vh + var(--card-top-offset) * 5);
+  z-index: 6;
+}
+
+.card-content {
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3), 8px 8px 0 rgba(0, 0, 0, 0.15);
+  background: #525252;
+  color: #f6d4b1;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  height: var(--card-height);
+  border: 4px solid currentColor;
+  box-sizing: border-box;
+  transform-origin: 50% 0%;
+  will-change: transform;
+}
+
+#card-1 .card-content {
+  background: #3b2b25;
+  border-color: #3b2b25;
+}
+#card-2 .card-content {
+  background: #466d76;
+  border-color: #466d76;
+}
+#card-3 .card-content {
+  background: #e68a7c;
+  border-color: #e68a7c;
+}
+#card-4 .card-content {
+  background: #8a6f3e;
+  border-color: #8a6f3e;
+}
+#card-5 .card-content {
+  background: #55663f;
+  border-color: #55663f;
+}
+#card-6 .card-content {
+  background: #8c4a52;
+  border-color: #8c4a52;
+}
+
+.card-content .left {
+  flex: 1.1;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: 0;
+  /* main is centre-aligned; card copy reads left */
+  text-align: left;
+}
+
+.card-content .right {
+  flex: 0.9;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
+  background: transparent;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.card-content .right .image-container {
+  flex: 1 1 0;
+  background: #fffaf2;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  max-height: calc(100% - 66px);
+}
+
+.card-content img,
+.card-content video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  cursor: pointer;
+}
+
+/* Cards whose artwork is a logo rather than a screenshot sit on a dark
+   plate so the mark keeps its own background instead of being cropped. */
+.card-content .right .image-container.logo {
+  background: #14101a;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.card-content .right .image-container.logo img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.card h2 {
+  font-family: "public-pixel", monospace;
+  font-size: 1.25rem;
+  margin: 0 0 10px;
+  background: none;
+  color: #fffaf2;
+  text-shadow: 2px 2px 0px #000;
+  padding: 0;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.card .card-year {
+  font-family: "public-pixel", monospace;
+  font-size: 0.55rem;
+  color: #fffaf2;
+  opacity: 0.75;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tech-pill {
+  background: #fffaf2;
+  color: #3b2b25;
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-family: "public-pixel", monospace;
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+  font-family: "public-pixel", monospace;
+  font-size: 0.62rem;
+  line-height: 1.75;
+  color: #fffaf2;
+  opacity: 0.95;
+  margin: 0 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+.skills-acquired {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.skills-label {
+  display: block;
+  font-family: "public-pixel", monospace;
+  font-size: 0.6rem;
+  color: #fffaf2;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.skills-list {
+  display: block;
+  font-family: "public-pixel", monospace;
+  font-size: 0.6rem;
+  color: #fffaf2;
+  line-height: 1.5;
+}
+
+.card-content .right .project-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-shrink: 0;
+}
+
+.card-content .right .project-link {
+  display: block;
+  flex: 1;
+  padding: 14px 12px;
+  background: #fffaf2;
+  color: #3b2b25;
+  text-decoration: none;
+  font-family: "public-pixel", monospace;
+  font-size: 0.62rem;
+  border-radius: 99px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.project-link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.project-link:active {
+  transform: translate(0);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --card-height: auto;
+  }
+  .card-content {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+  }
+  .card-content .right {
+    width: 100%;
+    padding: 16px;
+    order: -1;
+  }
+  /* The card has no definite height here, so flex-basis must carry the
+     size — a plain `height` loses to the base rule's `flex-basis: 0`. */
+  .card-content .right .image-container {
+    flex: 0 0 200px;
+    height: 200px;
+    max-height: none;
+  }
+  .card-content .left {
+    padding: 0 20px 20px;
+  }
+  .card h2 {
+    font-size: 1.05rem;
+  }
+  .card p {
+    font-size: 0.58rem;
+  }
+}
+
+.see-all-projects {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.see-all-btn {
+  display: inline-block;
+  padding: 16px 48px;
+  background: #3b2b25;
+  color: #f6d4b1;
+  text-decoration: none;
+  font-family: "public-pixel", monospace;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.see-all-btn:hover {
+  transform: translate(-3px, -3px) scale(1.02);
+  box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.5);
+}
+
+.see-all-btn:active {
+  transform: translate(0);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------------------------------------------------------
+   Achievements
+   ------------------------------------------------------------------ */
+
+.achievements-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(20px, 4vw, 60px);
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.achievement-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+}
+
+.achievement-side {
+  flex: 0 1 250px;
+  max-width: 250px;
+  min-width: 0;
+}
+
+.achievement-center {
+  flex: 0 1 380px;
+  max-width: 380px;
+  min-width: 0;
+}
+
+.achievement-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.achievement-side .achievement-image {
+  width: 100%;
+  max-width: 220px;
+  height: 150px;
+}
+
+.achievement-center .achievement-image {
+  width: 100%;
+  max-width: 350px;
+  height: 230px;
+}
+
+.achievement-image svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.achievement-title {
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  color: #f6d4b1;
+  background-color: #3b2b25;
+  font-family: "public-pixel", monospace;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  padding: 10px 16px;
+  margin: 0 0 10px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.achievement-center .achievement-title {
+  font-size: 1rem;
+  padding: 12px 28px;
+}
+
+.achievement-subtitle {
+  color: #3b2b25;
+  font-family: "chill", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .achievements-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .achievement-center {
+    order: 1 !important;
+  }
+  .achievement-item:nth-child(3) {
+    order: 2 !important;
+  }
+  .achievement-item:nth-child(1) {
+    order: 3 !important;
+  }
+  .achievement-side,
+  .achievement-center {
+    flex: 0 0 auto;
+    max-width: 90%;
+    width: 100%;
+  }
+  .achievement-side .achievement-image,
+  .achievement-center .achievement-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+  .achievement-side .achievement-image {
+    height: 180px;
+  }
+  .achievement-center .achievement-image {
+    height: 230px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Certifications
+   ------------------------------------------------------------------ */
+
+.certifications-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  padding: 20px;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.certification-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 200px;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #3b2b25;
+  border: dashed 2px #3b2b25;
+  border-radius: 12px;
+  background: rgba(255, 250, 242, 0.35);
+  box-shadow: 1px 1px 0 #f6d4b1, 5px 5px 0 var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certification-badge:hover {
+  transform: translate(-3px, -3px) !important;
+  box-shadow: 1px 1px 0 #f6d4b1, 8px 8px 0 var(--shadow) !important;
+}
+
+.certification-badge:active {
+  transform: translate(0) !important;
+  box-shadow: 1px 1px 0 #f6d4b1, 3px 3px 0 var(--shadow) !important;
+}
+
+.certification-badge svg {
+  width: 72px;
+  height: 72px;
+  display: block;
+}
+
+.cert-name {
+  font-family: "public-pixel", monospace;
+  font-size: 0.62rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.cert-issuer {
+  font-family: "chill", sans-serif;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------------
+   Contact
+   ------------------------------------------------------------------ */
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 24px 16px 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 208px;
+  padding: 22px 16px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #f6d4b1;
+  background: #3b2b25;
+  border: #f6d4b1 solid 1px;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--shadow);
+}
+
+.contact-card:active {
+  transform: translate(0);
+  box-shadow: 3px 3px 0 var(--shadow);
+}
+
+.contact-card svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+  color: #f6d4b1;
+}
+
+.contact-label {
+  font-family: "public-pixel", monospace;
+  font-size: 0.75rem;
+}
+
+.contact-value {
+  font-family: "chill", sans-serif;
+  font-size: 0.72rem;
+  opacity: 0.8;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.contact-footnote {
+  text-align: center !important;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  padding-top: 20px !important;
+}
+
+/* ------------------------------------------------------------------
+   Scroll reveal
+   ------------------------------------------------------------------ */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card-content {
+    transition: none;
+  }
+}
