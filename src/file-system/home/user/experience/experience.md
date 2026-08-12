@@ -26,12 +26,3 @@ Owned UAT and QA plus API validation with Postman, tracking every defect through
 Validated REST endpoints and reproduced production issues across backend services written in Node.js, TypeScript and MongoDB.
 
 Worked the full SDLC alongside engineers in Agile sprints, signing off changes before release.
-
-
-## *Hostel Representative*
-### Boys Hostel Block 1, VIT Bhopal
-### Aug 2024 - Jun 2025
-
-Ran operations, logistics and conflict resolution for a residential community of 3,500+ students across several batches.
-
-Oversaw discipline, mess, hostel sports and floor management with a structured council team.

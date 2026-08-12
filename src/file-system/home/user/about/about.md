@@ -10,4 +10,4 @@ Most of what I know came from breaking things: a video player that stalled on ev
 
 Two internships at Dynamatix taught me the rest — mostly that a test suite you trust is worth more than code you're proud of.
 
-Type "ls" to look around. There is "experience", "skills", "projects" and "contact" in here.
+Type "ls" to look around. There is education, experience, projects, skills, leadership and contact in here.
