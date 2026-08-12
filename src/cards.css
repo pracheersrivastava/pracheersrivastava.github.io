@@ -510,6 +510,205 @@
 }
 
 /* ------------------------------------------------------------------
+   Education
+   ------------------------------------------------------------------ */
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: clamp(0px, 95vw, 820px);
+  margin: 0 auto;
+  padding: 8px 16px 0;
+  box-sizing: border-box;
+}
+
+.edu-item {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 18px;
+  align-items: start;
+  padding: 22px 24px;
+  box-sizing: border-box;
+  text-align: left;
+  border: dashed 2px #3b2b25;
+  border-radius: 12px;
+  background: rgba(255, 250, 242, 0.35);
+  box-shadow: 1px 1px 0 #f6d4b1, 6px 6px 0 var(--shadow);
+}
+
+.edu-item.is-secondary {
+  padding: 16px 20px;
+  grid-template-columns: 40px 1fr auto;
+  gap: 14px;
+}
+
+.edu-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3b2b25;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.is-secondary .edu-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.edu-icon svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+  color: #f6d4b1;
+}
+
+.is-secondary .edu-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.edu-school {
+  display: block;
+  font-family: "public-pixel", monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #3b2b25;
+  margin-bottom: 8px;
+}
+
+.is-secondary .edu-school {
+  font-size: 0.66rem;
+  margin-bottom: 5px;
+}
+
+.edu-degree {
+  display: block;
+  font-family: "chill", sans-serif;
+  font-size: 0.98rem;
+  color: #3b2b25;
+  margin-bottom: 4px;
+}
+
+.is-secondary .edu-degree {
+  font-size: 0.88rem;
+}
+
+.edu-meta {
+  display: block;
+  font-family: "chill", sans-serif;
+  font-size: 0.85rem;
+  color: #3b2b25;
+  opacity: 0.72;
+}
+
+.edu-score {
+  font-family: "public-pixel", monospace;
+  font-size: 0.72rem;
+  white-space: nowrap;
+  color: #f6d4b1;
+  background: #3b2b25;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.is-secondary .edu-score {
+  font-size: 0.6rem;
+  padding: 6px 10px;
+}
+
+.edu-courses {
+  grid-column: 2 / -1;
+  margin-top: 14px;
+}
+
+.edu-courses-label {
+  display: block;
+  font-family: "chill", sans-serif;
+  font-size: 0.82rem;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.edu-courses ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edu-courses li {
+  font-family: "chill", sans-serif;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border: dashed 1px #3b2b25;
+  box-shadow: 1px 1px 0 #f6d4b1, 3px 3px 0 var(--shadow);
+}
+
+@media (max-width: 640px) {
+  .edu-item,
+  .edu-item.is-secondary {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .edu-score {
+    justify-self: start;
+  }
+  .edu-courses {
+    grid-column: 1;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Achievement stat strip
+   ------------------------------------------------------------------ */
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  width: clamp(0px, 95vw, 900px);
+  margin: 40px auto 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  border: dashed 2px #3b2b25;
+  border-radius: 12px;
+  background: rgba(255, 250, 242, 0.35);
+  box-shadow: 1px 1px 0 #f6d4b1, 5px 5px 0 var(--shadow);
+}
+
+.stat-value {
+  font-family: "public-pixel", monospace;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  color: #3b2b25;
+}
+
+.stat-label {
+  font-family: "chill", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+  color: #3b2b25;
+  opacity: 0.8;
+}
+
+/* ------------------------------------------------------------------
    Experience
    ------------------------------------------------------------------ */
 

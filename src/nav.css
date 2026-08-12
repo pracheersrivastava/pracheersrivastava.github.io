@@ -143,3 +143,11 @@ html[data-scroll="true"] #tip-scroll {
     display: block;
   }
 }
+
+/* Eight menu entries need to fit above the fold on a short phone. */
+@media (max-height: 700px) {
+  .menu-body {
+    font-size: 1.5em;
+    gap: 12px;
+  }
+}
