@@ -46,9 +46,9 @@ html[data-scroll="true"] nav .btn {
 .active .btn {
   box-shadow: 6px 6px 0px rgba(246, 212, 177, 0.7);
   background-color: #f6d4b1;
-  color: #525252;
-  fill: #525252;
-  border-color: #525252;
+  color: var(--color);
+  fill: var(--color);
+  border-color: var(--color);
   opacity: 1 !important;
   pointer-events: all !important;
 }
@@ -62,7 +62,7 @@ html[data-scroll="true"] nav .btn {
 }
 
 .menu-body {
-  background-color: #525252;
+  background-color: var(--color);
   color: #f6d4b1;
   font-size: 2em;
   font-family: "public-pixel", monospace;
@@ -106,7 +106,7 @@ html[data-scroll="true"] nav .btn {
   font-family: "chill", sans-serif;
   font-size: 14px;
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.75);
-  background-color: #525252;
+  background-color: var(--color);
   color: #f6d4b1;
   transition: all 0.3s;
   padding: 4px 24px;

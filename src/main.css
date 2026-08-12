@@ -1,8 +1,12 @@
 @import url("./collapse.css");
 @import url("./nav.css");
+@import url("./cards.css");
 
 :root {
-  --color: #525252;
+  --color: #3b2b25;
+  --cream: #f6d4b1;
+  --paper: #fffaf2;
+  --shadow: rgba(82, 82, 82, 0.25);
 }
 
 @font-face {
@@ -19,9 +23,14 @@
   padding: 0;
 }
 
-html,
+html {
+  background-color: #f6d4b1;
+}
+
 body {
-  overflow-x: hidden;
+  /* `clip` rather than `hidden`: hidden would make body a scroll container,
+     which breaks position:sticky on the stacking project cards. */
+  overflow-x: clip;
   background-color: #f6d4b1;
   font-family: "chill", sans-serif;
   font-size: 18px;
@@ -308,42 +317,3 @@ a:active {
   box-shadow: 4px 4px 0px rgba(82, 82, 82, 0.4);
 }
 
-.portrait {
-  position: relative;
-  width: clamp(0px, 95vw, 780px);
-  padding: 0;
-  height: 400px;
-  margin: auto;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 1px 1px 0px #f6d4b1, 6px 6px 0px rgba(82, 82, 82, 0.25);
-}
-
-.portrait-tag {
-  position: absolute;
-  color: white;
-  left: calc(50% + 120px);
-  top: 30px;
-  transform: translateX(-50%) rotate(20deg);
-}
-
-.portrait::after {
-  z-index: -1;
-  position: absolute;
-  top: -30px;
-  bottom: -30px;
-  left: -30px;
-  right: -30px;
-  display: block;
-  content: " ";
-  box-shadow: 6px 6px 0px rgba(82, 82, 82, 0.25);
-  background-color: #040d21;
-  background-image: url(img/bg.png);
-  background-size: contain;
-  filter: blur(30px);
-  color: #f6d4b1;
-  border: #f6d4b1 solid 1px;
-}
