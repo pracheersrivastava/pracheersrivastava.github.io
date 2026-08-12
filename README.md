@@ -27,10 +27,10 @@ render target which then goes through bloom, phosphor lag and scanline noise
 before landing on the screen mesh.
 
 The **page** below it is for people who just want to read. Scroll past the hero
-and the camera pulls back off the machine, handing over to About, Experience,
-Projects, Skills, Achievements, Certifications and Contact — in that order,
-so the narrative runs from who I am, to where I have worked, to what I have
-built, to what I know.
+and the camera pulls back off the machine, handing over to About, Education,
+Experience, Projects, Skills, Achievements, Certifications, Leadership and
+Contact — in that order, so it reads as who I am, where I studied, where I have
+worked, what I have built, and what I know.
 
 ![The machine](docs/screenshots/computer.jpg)
 
@@ -42,7 +42,9 @@ built, to what I know.
 
 ![Terminal](docs/screenshots/terminal.jpg)
 
-### Experience
+### Education and experience
+
+![Education](docs/screenshots/education.png)
 
 ![Experience](docs/screenshots/experience.png)
 
@@ -55,11 +57,15 @@ covered, so the stack reads as depth rather than as flat sheets.
 
 ![Projects](docs/screenshots/projects.png)
 
-### Skills, achievements and contact
+### Skills, achievements, certifications and leadership
 
 ![Skills](docs/screenshots/skills.png)
 
 ![Achievements](docs/screenshots/achievements.png)
+
+![Certifications](docs/screenshots/certifications.png)
+
+![Leadership](docs/screenshots/leadership.png)
 
 ![Contact](docs/screenshots/contact.png)
 
@@ -127,8 +133,10 @@ flowchart TD
     ROOT --> DEV["dev"]
     HOME --> USER["user"]
     USER --> ABOUT["about/about.md"]
+    USER --> EDU["education/education.md"]
     USER --> XP["experience/experience.md"]
     USER --> SKILLS["skills/skills.md"]
+    USER --> LEAD["leadership/leadership.md"]
     USER --> CONTACT["contact/contact.md"]
     USER --> TITLE["title/title.md"]
     USER --> PROJ["projects/"]
