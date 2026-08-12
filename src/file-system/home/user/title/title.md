@@ -1,16 +1,16 @@
-!(/images/ed-title.png?aspect=2&noflow=true&width=1.33)
+!(/images/pracheer-title.png?aspect=2&noflow=true&width=1.33)
 
 
-##   Hi there, 
+##   Hi there, I'm
 
-#  *I'm Ed H*
+#  *Pracheer*
 
-##   • Software Engineer
-##   • Digital Designer
-
-
-
+##   • Full-Stack Dev
+##   • Cyber Security
+##   • VIT Bhopal '27
 
 
-### Welcome to ED-Linux 1.0 LTS
+
+
+### Welcome to PS-Linux 1.0 LTS
 ### →→ Scroll or type "help" to get started

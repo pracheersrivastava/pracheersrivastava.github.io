@@ -4,8 +4,10 @@
 
 # Hi there
 
-My name is Ed Hinrichsen, I’m an award-winning web dev / digital designer and full stack software engineer. I have a passion for all things technology and design, from software engineering & machine learning to UI/UX & 3D graphics.
+My name is Pracheer Srivastava. I'm a BTech Computer Science student at VIT Bhopal, specialising in Cyber Security & Digital Forensics, and I build full-stack web apps, Android clients and the infrastructure that keeps them alive.
 
-In addition to my love of technology and design, I am also interested in education, history, economics and politics.
+Most of what I know came from breaking things: a video player that stalled on every seek, a Bitcoin node that went quiet at 3am, a CSV parser that fell over on the one file that mattered.
 
-Type "cd ~/projects" then "ls" to see details of some of the projects I have developed over my fifteen plus years of coding experience.
+Two internships at Dynamatix taught me the rest — mostly that a test suite you trust is worth more than code you're proud of.
+
+Type "cd ~/projects" then "ls" to see what I have built.
