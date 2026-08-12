@@ -27,8 +27,10 @@ render target which then goes through bloom, phosphor lag and scanline noise
 before landing on the screen mesh.
 
 The **page** below it is for people who just want to read. Scroll past the hero
-and the camera pulls back off the machine, handing over to a stack of project
-cards.
+and the camera pulls back off the machine, handing over to About, Experience,
+Projects, Skills, Achievements, Certifications and Contact — in that order,
+so the narrative runs from who I am, to where I have worked, to what I have
+built, to what I know.
 
 ![The machine](docs/screenshots/computer.jpg)
 
@@ -40,6 +42,10 @@ cards.
 
 ![Terminal](docs/screenshots/terminal.jpg)
 
+### Experience
+
+![Experience](docs/screenshots/experience.png)
+
 ### Project cards stack as you scroll
 
 Each card pins under the one before it, scaling down and dimming as it gets
@@ -49,7 +55,9 @@ covered, so the stack reads as depth rather than as flat sheets.
 
 ![Projects](docs/screenshots/projects.png)
 
-### Achievements and contact
+### Skills, achievements and contact
+
+![Skills](docs/screenshots/skills.png)
 
 ![Achievements](docs/screenshots/achievements.png)
 
@@ -119,6 +127,8 @@ flowchart TD
     ROOT --> DEV["dev"]
     HOME --> USER["user"]
     USER --> ABOUT["about/about.md"]
+    USER --> XP["experience/experience.md"]
+    USER --> SKILLS["skills/skills.md"]
     USER --> CONTACT["contact/contact.md"]
     USER --> TITLE["title/title.md"]
     USER --> PROJ["projects/"]
