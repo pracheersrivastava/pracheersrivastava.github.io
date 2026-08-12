@@ -178,6 +178,14 @@ Content lives in two places, and a project change means touching both.
 | Resume served by the nav button | `public/Pracheer-Srivastava-Resume.pdf` |
 | Card colours, stack behaviour, section styling | `src/cards.css` |
 
+To swap the portrait on the CRT, run the halftone tool against a new headshot
+rather than dropping a photo in directly — a continuous-tone image will clip
+and bloom into a white blob:
+
+```bash
+powershell -File tools/build-crt-portrait.ps1 -Source path/to/headshot.jpg
+```
+
 The terminal markdown dialect is deliberately small:
 
 | Syntax | Result |
