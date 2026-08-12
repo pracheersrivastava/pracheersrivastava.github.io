@@ -1,14 +1,17 @@
 {
   "author": {
-    "name": "Ed Hinrichsen",
-    "url": "https://www.edwardh.io"
+    "name": "Pracheer Srivastava",
+    "url": "https://github.com/pracheersrivastava"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edhinrichsen/retro-computer-website.git"
-  },
+  "contributors": [
+    {
+      "name": "Ed Hinrichsen",
+      "url": "https://edh.dev",
+      "comment": "Author of retro-computer-website, the MIT-licensed engine this is built on"
+    }
+  ],
   "license": "MIT",
-  "name": "retro-computer-website",
+  "name": "pracheer-portfolio",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -27,5 +30,8 @@
     "typescript": "^5.2.2",
     "vite": "^5.2.8",
     "vite-plugin-checker": "^0.6.4"
+  },
+  "allowScripts": {
+    "esbuild@0.20.2": true
   }
 }
